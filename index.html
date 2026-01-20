@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- For browsers and search engines -->
+    <title>Chocobo's Miiboard</title>
+    <meta name="description"
+        content="Chocobo's Miiboard is a dedicated gaming page with various features including screenshots galleries and more." />
+
+    <!-- For social media embedding-->
+    <meta property="og:title" content="Chocobo's Miiboard">
+    <meta property="og:description"
+        content="Chocobo's Miiboard is a dedicated gaming page with various features including screenshots galleries and more.">
+    <!-- <meta property="og:image" content="https://yourwebsite.com/image.jpg"> - I need to decide on the image first -->
+    <meta property="og:url" content="https://link.here">
+    <meta property="og:type" content="website">
+
+    <!-- Icon -->
+    <link rel="icon" type="image/x-icon" href="/images/icon.ico">
+
+    <!-- Bunny Fonts - Nunito -->
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=nunito:400,500,600,700" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <!-- As a heading -->
+    <nav class="navbar fixed-top mb-3">
+        <div class="container-fluid justify-content-center">
+            <span class="mb-0 h2">Miiboard</span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <!-- Left Sidebar - Profile Card (Fixed) -->
+            <div class="col-12 col-md-4 col-lg-3">
+                <div class="position-sticky" style="top: 1rem;">
+                    <div class="card">
+                        <!-- Banner Image -->
+                        <img src="/images/profile/banner.png" class="card-img-top" alt="Banner"
+                            style="height: 120px; object-fit: cover;">
+
+                        <div class="card-body">
+                            <!-- Profile Photo and Info Side by Side -->
+                            <div class="d-flex align-items-start" style="margin-top: -50px;">
+                                <!-- Profile Photo -->
+                                <img src="/images/profile/mii_profile.png" alt="Profile"
+                                    class="rounded me-2 flex-shrink-0"
+                                    style="width: 80px; height: 80px; object-fit: cover; border: 3px solid #B0ABDC; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+
+                                <!-- Name and Handle -->
+                                <div class="mt-auto">
+                                    <h6 class="mb-0 fw-bold">Chocobo</h6>
+                                    <p class="small mb-0">[Switch Friend Code]</p>
+                                </div>
+                            </div>
+                            <p class="small mt-3 mb-0 text-center">he/him &sdot; 🏳️‍🌈</p>
+                        </div>
+                    </div>
+                    <div class="card mt-3">
+                        <div class="card-body">
+                            <p class="card-title text-center"><b>About Me</b></p>
+                            <p class="card-text" style="text-align: justify;">Welcome to my Miiboard where I write
+                                various thoughts I have about the games I play and showcase my favorite screenshots!</p>
+                            <hr class="border-2 my-3 w-50 mx-auto">
+                            <p class="card-text">Birthday: 25th April</p>
+                            <p class="card-text">Devices: Wii, 3DS, SW1, SW2</p>
+                            <p class="card-text">Favorite genre: Simulation</p>
+                        </div>
+                    </div>
+                    <!-- Navigation Card -->
+                    <div class="card mt-3 mb-3">
+                        <div class="list-group list-group-flush">
+                            <a href="#posts" class="list-group-item list-group-item-action active"
+                                onclick="showSection('posts', event)">
+                                <i class="bi bi-pencil-square"></i> Posts
+                            </a>
+                            <a href="#screenshots" class="list-group-item list-group-item-action"
+                                onclick="showSection('screenshots', event)">
+                                <i class="bi bi-camera"></i> Screenshots
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Content Area - Posts (Scrollable) -->
+            <div class="col-12 col-md-8 col-lg-9">
+                <!-- Posts Section -->
+                <div id="posts-section" class="content-section">
+                    <!-- Posts will be loaded here dynamically from the /data/posts.json -->
+                </div>
+
+                <!-- Screenshots Section (Hidden by default) -->
+                <!-- In the future I will make a similar dynamic loading of screenshots from a JSON file like posts have -->
+                <div id="screenshots-section" class="content-section" style="display: none;">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold text-center">Screenshot Gallery</h4>
+                            <h5 class="card-text">Pokémon Legends: Z-A</h5>
+                            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+                                <!-- Screenshot cards will go here -->
+                                <div class="col">
+                                    <img src="images/games/legends-za/legends-za-1.JPG" class="img-fluid rounded"
+                                        alt="Legends ZA Screenshot 1">
+                                </div>
+                                <div class="col">
+                                    <img src="images/games/legends-za/legends-za-2.JPG" class="img-fluid rounded"
+                                        alt="Legends ZA Screenshot 2">
+                                </div>
+                                <div class="col">
+                                    <img src="images/games/legends-za/legends-za-3.JPG" class="img-fluid rounded"
+                                        alt="Legends ZA Screenshot 3">
+                                </div>
+                                <div class="col">
+                                    <img src="images/games/legends-za/legends-za-4.JPG" class="img-fluid rounded"
+                                        alt="Legends ZA Screenshot 4">
+                                </div>
+                                <div class="col">
+                                    <img src="images/games/legends-za/legends-za-5.JPG" class="img-fluid rounded"
+                                        alt="Legends ZA Screenshot 5">
+                                </div>
+                                <div class="col">
+                                    <img src="images/games/legends-za/legends-za-6.JPG" class="img-fluid rounded"
+                                        alt="Legends ZA Screenshot 6">
+                                </div>
+                                <div class="col">
+                                    <img src="images/games/legends-za/legends-za-7.JPG" class="img-fluid rounded"
+                                        alt="Legends ZA Screenshot 7">
+                                </div>
+                                <div class="col">
+                                    <img src="images/games/legends-za/legends-za-8.JPG" class="img-fluid rounded"
+                                        alt="Legends ZA Screenshot 8">
+                                </div>
+                                <div class="col">
+                                    <img src="images/games/legends-za/legends-za-9.JPG" class="img-fluid rounded"
+                                        alt="Legends ZA Screenshot 9">
+                                </div>
+                                <div class="col">
+                                    <img src="images/games/legends-za/legends-za-10.JPG" class="img-fluid rounded"
+                                        alt="Legends ZA Screenshot 10">
+                                </div>
+                                <div class="col">
+                                    <img src="images/games/legends-za/legends-za-11.JPG" class="img-fluid rounded"
+                                        alt="Legends ZA Screenshot 11">
+                                </div>
+                                <div class="col">
+                                    <img src="images/games/legends-za/legends-za-12.JPG" class="img-fluid rounded"
+                                        alt="Legends ZA Screenshot 12">
+                                </div>
+                                <div class="col">
+                                    <img src="images/games/legends-za/legends-za-13.JPG" class="img-fluid rounded"
+                                        alt="Legends ZA Screenshot 13">
+                                </div>
+                                <div class="col">
+                                    <img src="images/games/legends-za/legends-za-14.JPG" class="img-fluid rounded"
+                                        alt="Legends ZA Screenshot 14">
+                                </div>
+                                <div class="col">
+                                    <img src="images/games/legends-za/legends-za-15.JPG" class="img-fluid rounded"
+                                        alt="Legends ZA Screenshot 15">
+                                </div>
+                                <!-- Add more screenshots -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script src="/js/posts.js"></script>
+
+    <script>
+        function showSection(section, event) {
+            event.preventDefault();
+
+            // Hide all sections
+            document.querySelectorAll('.content-section').forEach(sec => {
+                sec.style.display = 'none';
+            });
+
+            // Show selected section
+            document.getElementById(section + '-section').style.display = 'block';
+
+            // Update active state in navigation
+            document.querySelectorAll('.list-group-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+
+</html>

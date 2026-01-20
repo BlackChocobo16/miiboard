@@ -1,0 +1,152 @@
+/* This CSS file is still in development and may have some variables 
+or styles from the template that are not in use or fully optimised, 
+I will update it further while working on the website. */
+
+:root {
+    /* Brand Colors */
+    --color-primary: #6056B8;
+    --color-primary-light: #B0ABDC;
+    --color-primary-dark: #302B5C;
+    --color-secondary: #7B7B7C;
+    --color-secondary-light: #e7e7e7;
+    --color-secondary-dark: #545455;
+    --color-accent: #ffffff;
+
+    /* Neutral Colors */
+    --color-background: #B0ABDC;
+    --color-surface: #6056B8;
+    --color-surface-elevated: #ffffff;
+    --color-border: #dee2e6;
+    --color-divider: #e9ecef;
+
+    /* Text Colors */
+    --color-text-primary: white;
+    --color-text-secondary: #6c757d;
+    --color-text-muted: #CFCCEA;
+    --color-text-on-primary: #e7e7e7;
+
+    /* Status Colors */
+    --color-success: #28a745;
+    --color-warning: #ffc107;
+    --color-error: #dc3545;
+    --color-info: #17a2b8;
+
+    /* Spacing Scale */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 3rem;
+    --space-3xl: 4rem;
+
+    /* Border Radius */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 1rem;
+    --radius-full: 9999px;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+
+    /* Typography */
+    --font-family-base: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-family-heading: var(--font-family-base);
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 2rem;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --line-height-tight: 1.25;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.75;
+
+    /* Transitions */
+    --transition-fast: 150ms ease-in-out;
+    --transition-base: 250ms ease-in-out;
+    --transition-slow: 350ms ease-in-out;
+
+    /* Z-index Scale */
+    --z-dropdown: 1000;
+    --z-sticky: 1020;
+    --z-fixed: 1030;
+    --z-modal-backdrop: 1040;
+    --z-modal: 1050;
+    --z-popover: 1060;
+    --z-tooltip: 1070;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-normal);
+    margin: 0;
+    padding: 0;
+    padding-top: 90px;
+    min-height: 100vh;
+}
+
+.text-muted {
+    color: var(--color-text-muted) !important;
+}
+
+.card {
+    background-color: var(--color-surface);
+    box-shadow: var(--shadow-md);
+    color: var(--color-text-primary);
+}
+
+.position-sticky {
+    top: 90px !important;
+}
+
+/* Only apply sticky positioning on medium screens and up */
+/* This is important because on desktop it makes sense to have sitcky positioning 
+while on mobile it does not, it would take too much from the posts visibility. */
+@media (max-width: 767px) {
+    .position-sticky {
+        position: static !important;
+    }
+}
+
+.navbar {
+    background-color: var(--color-primary);
+    color: var(--color-text-primary);
+    z-index: var(--z-fixed);
+    height: 70px;
+}
+
+/* List Group Customization */
+.list-group-item {
+    background-color: var(--color-surface);
+    color: var(--color-text-primary);
+    border-color: var(--color-border);
+}
+
+.list-group-item:hover {
+    background-color: var(--color-primary-dark);
+    color: var(--color-text-primary);
+}
+
+.list-group-item.active {
+    background-color: var(--color-primary-light) !important;
+    color: var(--color-primary-dark) !important;
+    border-color: var(--color-primary-light) !important;
+    font-weight: 600;
+}
+
+.list-group-item-action:focus {
+    background-color: var(--color-primary-dark);
+    color: var(--color-text-primary);
+}

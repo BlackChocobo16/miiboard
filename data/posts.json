@@ -1,0 +1,59 @@
+[
+    {
+        "id": 1,
+        "author": "Chocobo",
+        "profileImage": "/images/profile/mii_profile.png",
+        "game": "Miiboard",
+        "date": "January 11, 2026",
+        "title": "First Miiboard post!",
+        "blocks": [
+            {
+                "type": "text",
+                "content": "To some people the layout of this website might be familiar and that's because this project is my attempt to remake Miiverse (I really miss it to be honest) in a style that screams <i>Chocobo</i>~"
+            },
+            {
+                "type": "text",
+                "content": "I've got a long way to go and many things to add but I'm very happy of how things are turning out!"
+            },
+            {
+                "type": "image",
+                "src": "/images/posts/post1_img1.png",
+                "alt": "Post 1 Image 1"
+            },
+            {
+                "type": "text",
+                "content": "It will be interesting to see how this website evolves in the future so I'll be keeping this screenshot as a mark of how it used to look at the beginning."
+            },
+            {
+                "type": "text",
+                "content": "I'm still thinking about the colors I should be using, text sizes and many other details which of course I will keep updating until I am 100% happy of the design but so far it's looking quite decent~ (maybe a little bit chaotic in some places...)"
+            },
+            {
+                "type": "heading",
+                "level": 5,
+                "content": "What is the purpose of this project?"
+            },
+            {
+                "type": "text",
+                "content": "There might be many other projects out there which are trying to revive Miiverse however this project of mine is not to create a platform but rather a website which is themed around Miiverse (of course with some changes that I like)."
+            },
+            {
+                "type": "text",
+                "content": "Everyone is free to use this template (I would call it) and customise it to their needs and liking. My motivation for this project was to create a cute area where I could share the screenshots I take in games and rant about them like I used to do back when I would post them on Miiverse."
+            },
+            {
+                "type": "heading",
+                "level": 5,
+                "content": "What is next?"
+            },
+            {
+                "type": "text",
+                "content": "At the moment of writing I've got some ideas of what I want to improve and what I want to change but I'm mostly working on removing some CSS from the template I used that I don't need for this project."
+            },
+            {
+                "type": "text",
+                "content": "Also for the future I want to change the screenshots section to load screenshots dynamically from a JSON file like the posts section does so the index.html file is not cluttered with a huge number of screenshot files..."
+            }
+        ]
+    }
+]
