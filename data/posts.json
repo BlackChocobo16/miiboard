@@ -2,7 +2,7 @@
     {
         "id": 1,
         "author": "Chocobo",
-        "profileImage": "/images/profile/mii_profile.png",
+        "profileImage": "images/profile/mii_profile.png",
         "game": "Miiboard",
         "date": "January 11, 2026",
         "title": "First Miiboard post!",
@@ -17,7 +17,7 @@
             },
             {
                 "type": "image",
-                "src": "/images/posts/post1_img1.png",
+                "src": "images/posts/post1_img1.png",
                 "alt": "Post 1 Image 1"
             },
             {

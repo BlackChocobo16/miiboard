@@ -1,6 +1,6 @@
 async function loadPosts() {
     try {
-        const response = await fetch('/data/posts.json');
+        const response = await fetch('data/posts.json');
         const posts = await response.json();
         const postsContainer = document.getElementById('posts-section');
         
@@ -31,7 +31,7 @@ function createPostCard(post) {
 
     // Use custom profile image or default
     // For the future I plan to add more profile images with different Mii emotions to choose from.
-    const profileImage = post.profileImage || '/images/profile/mii_profile.png';
+    const profileImage = post.profileImage || 'images/profile/mii_profile.png';
 
     card.innerHTML = `
         <div class="card-body ${layoutClass}">
