@@ -55,5 +55,28 @@
                 "content": "Also for the future I want to change the screenshots section to load screenshots dynamically from a JSON file like the posts section does so the index.html file is not cluttered with a huge number of screenshot files..."
             }
         ]
+    },
+    {
+        "id": 2,
+        "author": "Chocobo",
+        "profileImage": "images/profile/mii_profile_happy.png",
+        "game": "Miiboard",
+        "date": "January 21, 2026",
+        "title": "Deployed on GitHub Pages!",
+        "blocks":[
+            {
+                "type": "text",
+                "content": "I've been quite busy lately and I haven't had as much time as I would've liked to work on this project but I finally mananged to deploy it!"
+            },
+            {
+                "type": "text",
+                "content": "There are many things I want to improve but I'll most likely start writing some gaming related posts as this project is mainly about that with some news about new features from time to time!"
+            },
+            {
+                "type": "gif",
+                "src": "https://media1.tenor.com/m/nh5GiWZW1g4AAAAC/psyduck-floaty.gif",
+                "alt": "Post 2 GIF 1"
+            }
+        ]
     }
 ]

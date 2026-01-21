@@ -3,10 +3,10 @@ async function loadPosts() {
         const response = await fetch('data/posts.json');
         const posts = await response.json();
         const postsContainer = document.getElementById('posts-section');
-        
+
         // Sort posts by ID in descending order (newest first)
         posts.sort((a, b) => b.id - a.id);
-        
+
         posts.forEach(post => {
             const postCard = createPostCard(post);
             postsContainer.appendChild(postCard);
@@ -81,7 +81,11 @@ function renderBlock(block) {
             `;
 
         case 'gif':
-            return `<img src="${block.src}" class="img-fluid rounded mb-3" alt="${block.alt || 'GIF'}">`;
+            return `
+            <div class="text-center">
+                <img src="${block.src}" class="img-fluid rounded mb-3" alt="${block.alt || 'GIF'}">
+            </div>
+            `;
 
         case 'image-grid':
             const cols = block.columns || 3;
